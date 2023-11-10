@@ -1,4 +1,4 @@
-Colores consola
-Formateo TExto Consola
-Turno y Acciones.
-Desplazamiento pasivo guardias
+Todo: Colores consola
+    Formateo Texto Consola
+    Turno y Acciones.
+    Desplazamiento pasivo guardias
