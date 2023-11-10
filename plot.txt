@@ -1,0 +1,116 @@
+Pj
+    ac 13
+    vida 8
+    habilidades
+    if arma[0]
+        if enemigo.ac<=2+randint(1,20)
+            2+randint(1,6)*sneak+randint(1,arma[0])
+        normal
+    posicion
+    arma
+Guardia
+    ac 12
+    vida 8
+    arma plasma 1d8+4
+    posicion
+    persiguiendo
+Splinter
+    ac 14
+    vida 5
+    arma puñal 1d4+3
+    posicion
+    respuesta
+    pregunta
+    persiguiendo
+
+Array armas indice:dañofuerza,dañoagilidad
+Array Textos daños
+array mapa
+llave puerta
+palo
+
+Rotura armas
+
+Startup
+    pregunta splinter
+        pregunta=11+random
+
+Turno
+    Detección
+        detección enemigos "deteción enfrentada"
+    Descripción
+        mensaje habitación "esta habitacion contiene, encuentras está"
+        mensaje enemigo  "Enemigo te ha/no detectado/esta durmiendo"
+    Acción
+        Combate
+        Interacciones
+        Inspeccionar
+    movimiento
+        mover Pj
+        N S E O
+        mover npc
+            perseguir reacción
+
+Funcion perseguir
+
+Función intro
+
+Escapas de la celda con tu compañero de celda
+a tu compañero de celda lo captura un alien
+
+
+Mapa
+1 Celda inicial sur 3
+2 Pasillo01 sur 7 este 3
+3 pasillo02 oeste 2 sur 9 este 4 norte 1
+4 pasillo03 oeste 3 sur 10 este 5
+5 pasillo04 oeste 4 este 6
+6 ComisariaEntrada oeste 4
+7 pasillo11 norte 2 este {8} sur 11
+8 palo oeste 7 sur 12 este 9
+9 pasillo13 norte 3 oeste 8 sur 13 este {10}
+10 passillo14 norte 4 este 9
+11 guardiadormido norte 7 sur 15 oeste {12}
+12 pasillo22 norte 8 oeste {11} este 13
+13 splintercell norte 9 oeste 12 este (14)
+14 agujerosplinter norte 10 sur 17
+15 tunelrata11 norte 11 este 16
+16 tunelrata12 norte 13 oeste 15
+17 Salidaderrumbada norte 14
+
+(normal antinormal progrado retrogrado)
+
+Armas
+0 Mano 0,1
+1 Barra luces 4,0
+2 Pistola Plasma 0,8
+3 Vidrio con trapo 0,4
+4 Piedra 2,0
+
+Elije códico alfafónico para identificarte:
+Elije cromosoma redundante X/Y:
+
+Abres los ojos y es otro ciclo más en donde quiera que estés; metid{} en una celda cuyo beige inerte envuelve tu mirada en todas direcciones,
+Todas, salvo en la dirección de tu implante indica como antinormal, donde hay una capa polimérica que nos mantiene encerrados. Tanto a tí como a Greg.
+-Sabes, estuve pensando en todo el tema del racismo este intelectual y la amnistía de la experimentacion, al fin y al cabo
+creo que esto es si no una oportunidad para que podamos optar a trabajos para los que la raza humana originalmente no está capacitada
+,tenemos los implantes y tal, pero ya sabes, siempre se van quedando obsoletos, y quien rechazaría un cerebro bioelectrónico con refrigeracion
+mejorada?, Nadie, si lo piensas un poco.
+[Ego {}]
+1 Cállate, Greg, no hasta que no tenga cafeína. 2 Tienes razon, además todas esas cosas son algo caras. 3 Tu crees que nos van a tratar
+decentemente? Ni siguiera tienen esterilizadores multiespectro en las celdas. Sólo uno de partículas alfa casi gastado.
+Greg se queda pensativo en la esquina junto a la membrana.
+
+Tras unos instantes lo que parece un xeno con unas garas negras y afiladas desciende amenazante desde el techo, mostrando una boca recursiva de dientes hambrientos
+mientras emite sonidos chasqueantes, cuyo significado cobra sentido en tu cabeza mientras el chip de la base de tu craneo hace su trabajo.
+[Xeno 983812]Gomiiiiisss, tu dar gomiissss
+Instantes despues y tras un breve destello, el cuerpo sin vida del xeno se desploma en el pasillo mientras se encoje sobre si mismo
+[Guardia Nbei] Otra vez las putas plagas, estoy hasta los cojones de ellas. Se están comiendo las barras de proteinas de los especímentes. Vamos a tener que
+encargar un vector esterilizador otra vez.
+A Greg se le ilumina su greñoso rostro y ojeras causadas de la locura transitoria sobre la que se estaba hundiendo lentamente
+y se abalanza sobre la membrana, cuerpo desnudo presionándola y flexionandola suavemente.
+Ante esta terrorífica visión de un humano desnudo, con sus flagelos extendidos y con sus 6 extremidades contra la membrana de contención,el pobre Nbei reacciona disparando su
+lanzador de plasma hacia el humano Greg, perforando la membrana y seccionando el brazo derecho.
+[Guardia Nbei] Mierda, mierda, mierda, la primera vez que conseguimos unos humanos y ya rompo uno.Tengo que ver si estos les vuelven a crecer o no.
+ Tu, sé buen human{} y quédate en tu camita, ahora vengo.
+Dicho eso, el guardia, bastante más pequeño que Greg, se lo coloca encima y se marcha por la compuerta de progrado.
