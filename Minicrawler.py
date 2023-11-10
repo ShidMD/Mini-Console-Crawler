@@ -1,21 +1,20 @@
 import random
 import time
 
-
 class Character:
     name = None
-    description = str()
-    agi = 0
-    strength = 0
+    description = None
+    agi = int()
+    strength = int()
     health = int()
-    weapon = (0, 0, None)
+    weapon = None
     key = False
 
-    def take_hit(self, hit, dmg=int()):
+    def hit(self, hit, dmg=int()):
         if hit >= 10 + self.agi:
             self.health = self.health - dmg
 
-    position = int
+    position = None
     target = None  # character
 
     def take_weapon(self):
@@ -50,19 +49,19 @@ class Player(Character):
 
 
 class Room:
-    connections = (None, None, None, None)
-    name = ""
-    description = ""
+    connections = None # (NORMAL, ANTINORMAL, PROGRADO, RETROGRADO)
+    name = None
+    description = None
     key = None
     bar = None
-    move_description = ""
-
+    move_description = None
     trigger = None  # Function
 
-    def __init__(self, n, d, md):
+    def __init__(self, n, d, md): # name,description,move_description
         self.name = n
         self.description = d
         self.move_description = md
+        return self
 
 class Scene:
     pc = Player()
@@ -185,7 +184,7 @@ class Scene:
             option = input("[?]:").capitalize()
             self.pc.name = option if option != "" else None
 
-#     def turn(self):
+# Todo: def turn(self):
 #         detection()
 #         npc_target()
 #         narrate_room()
@@ -205,7 +204,7 @@ def main():
     s = Scene()
     s.map_build()
     s.initialization()
-    # print("la respuesta a la pregunta de splinter es:{}".format(c_splinter.question))
+        #Debug print("la respuesta a la pregunta de splinter es:{}".format(c_splinter.question))
     s.intro()
     # Turno
     # while out>0 :
@@ -213,5 +212,5 @@ def main():
     # gameover()
     return 0
 
-
+# Entry Point
 main()
